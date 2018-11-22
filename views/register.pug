@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    link(href="/css/bootstrap.min.css", rel="stylesheet")
+    link(href="/css/all.css", rel="stylesheet")
+    link(href="/css/gooapis.css", rel="stylesheet")
+    link(href="/css/register.css", rel="stylesheet")
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')
+  body
+    .bgImg
+    .content
+      .d-flex.h-100.align-items-center.justify-content-center
+        .container
+          .row
+            .col-md-4.col-sm-6.ml-auto.mr-auto
+              .card
+                .card-body
+                  .glowBox
+                    h4.title.logotxt 幣安自動下單系統
+                    .socialMedia
+                      //- a.btn.btn-just-icon.btn-link(href='#')
+                      //-   i.fab.fa-facebook-square
+                      //- a.btn.btn-just-icon.btn-link(href='#')
+                      //-   i.fab.fa-twitter
+                      //- a.btn.btn-just-icon.btn-link(href='#')
+                      //-   i.fab.fa-google-plus
+                  .desc.text-center
+                    p 感謝您註冊我們的服務!
+                  .signUp
+                    form(action='/register',method="POST")
+                      span
+                        input.form(name="name", type='text', placeholder='姓名', autocomplete='off', style='cursor: auto;')
+                        span.underline
+                      span
+                        input.form(name="email", type='text', placeholder='電子郵件', autocomplete='off', style='cursor: auto;')
+                        span.underline
+                      span
+                        input.form(name="password", type='password', placeholder='密碼', autocomplete='off', style='cursor: auto;')
+                        span.underline
+                      span
+                        input.form(name="password2", type='password', placeholder='確認密碼', autocomplete='off', style='cursor: auto;')
+                        span.underline
+                      .text-center
+                        button.btn.btn-primary.btn-link.btn-wd.btn-lg(type="submit") 註冊
+                        button.btn.btn-primary1.btn-link1.btn-wd.btn-lg 回首頁
+    
+                    

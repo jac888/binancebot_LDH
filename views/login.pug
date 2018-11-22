@@ -1,0 +1,29 @@
+doctype html
+html
+  //link(href='../CSS/requirements.css', rel='stylesheet')
+  //script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js')
+  head
+    link(href="/css/bootstrap.min.css", rel="stylesheet")
+    link(href="/css/product.css", rel="stylesheet")
+  body
+    .d-flex.flex-column.flex-md-row.align-items-center.p-3.px-md-4.mb-3.bg-white.border-bottom.shadow-sm
+        h5.my-0.mr-md-auto.font-weight-normal 幣安自動下單系統
+        nav.my-2.my-md-0.mr-md-3
+        //-     a.p-2.text-dark(href='#') 關於我們
+        //-     a.p-2.text-dark(href='#') 介紹
+        //-     a.p-2.text-dark(href='#') 尋求協助
+        //-     a.p-2.text-dark(href='#') 價格
+        //- a.btn.btn-outline-primary(href='#') 註冊
+        a.btn.btn-outline-primary(href='#') 登入
+    .container
+         .log-form
+            h2 登入您的帳號
+            form
+                input(type='text', title='使用者名稱', placeholder='使用者名稱')
+                input(type='password', title='密碼', placeholder='密碼')
+                button.btn(type='submit') 登入
+                a.forgot(href='#') 忘記密碼?
+            // end log form
+
+
+            
