@@ -8,7 +8,7 @@ html
     script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')
-  body
+  body       
     .bgImg
     .content
       .d-flex.h-100.align-items-center.justify-content-center
@@ -33,15 +33,35 @@ html
                       span
                         input.form(name="name", type='text', placeholder='姓名', autocomplete='off', style='cursor: auto;')
                         span.underline
+                        if(errors)
+                          for error in errors
+                            if (error.param=='name')
+                                p.help.is-danger(style="color:red") #{error.msg} 
+                                -break
                       span
                         input.form(name="email", type='text', placeholder='電子郵件', autocomplete='off', style='cursor: auto;')
                         span.underline
+                        if(errors)
+                          for error in errors
+                            if (error.param=='email')
+                                p.help.is-danger(style="color:red") #{error.msg} 
+                                -break
                       span
                         input.form(name="password", type='password', placeholder='密碼', autocomplete='off', style='cursor: auto;')
                         span.underline
+                        if(errors)
+                          for error in errors
+                            if (error.param=='password')
+                                p.help.is-danger(style="color:red") #{error.msg} 
+                                -break
                       span
                         input.form(name="password2", type='password', placeholder='確認密碼', autocomplete='off', style='cursor: auto;')
                         span.underline
+                        if(errors)
+                          for error in errors
+                            if (error.param=='password2')
+                                p.help.is-danger(style="color:red") #{error.msg} 
+                                -break
                       .text-center
                         button.btn.btn-primary.btn-link.btn-wd.btn-lg(type="submit") 註冊
                         button.btn.btn-primary1.btn-link1.btn-wd.btn-lg 回首頁

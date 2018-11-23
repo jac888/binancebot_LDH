@@ -32,10 +32,10 @@ app.use(cookieParser());
 // });
 
 //connect mongodb
-mongoose.connect(
-  "mongodb://localhost/customers",
-  { useNewUrlParser: true }
-);
+// mongoose.connect(
+//   "mongodb://localhost/customers",
+//   { useNewUrlParser: true }
+// );
 const db = mongoose.connection;
 //console.log(db);
 
@@ -53,7 +53,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Express validator
-
+app.use(expressValidator());
 //connect flash
 app.use(flash());
 

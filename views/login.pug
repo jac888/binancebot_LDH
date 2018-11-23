@@ -14,8 +14,10 @@ html
         //-     a.p-2.text-dark(href='#') 尋求協助
         //-     a.p-2.text-dark(href='#') 價格
         //- a.btn.btn-outline-primary(href='#') 註冊
-        a.btn.btn-outline-primary(href='#') 登入
+        //- a.btn.btn-outline-primary(href='#') 登入
     .container
+         if (success_msg)
+          div.alert.alert-danger(style="red") 12345
          .log-form
             h2 登入您的帳號
             form
